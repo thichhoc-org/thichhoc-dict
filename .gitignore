@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Downloaded upstream corpora — regenerate with `make download`.
+# Never commit third-party data; we ship only our derived JSONL entries.
+data/source/raw/
+dict-*/data/source/raw/
+
+# Stage 1 intermediates — regenerate with `make stage1`. Only the final
+# sharded store in data/entries/ belongs in git.
+data/work/
+dict-*/data/work/
+
+# Build output
+build/
+dist/
+*.mobi
+*.dict
+*.dict.dz
+*.idx
+*.syn
+*.ifo
+dicthtml-*.zip
+
+# Toolchain binaries fetched at build time
+.tools/
+
+# macOS
+.DS_Store
+
+# Tài liệu nội bộ: kế hoạch, chiến lược, lộ trình. Giữ trên máy, không đẩy lên
+# repo công khai. Tài liệu dành cho người dùng và người đóng góp nằm thẳng
+# trong docs/ (build-toolchain.md), README.md và CONTRIBUTING.md.
+docs/plan/
+
+cmp/

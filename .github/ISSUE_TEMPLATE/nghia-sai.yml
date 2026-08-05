@@ -1,0 +1,51 @@
+name: Nghĩa sai hoặc lạc ngữ cảnh
+description: Từ tra ra được, nhưng nghĩa tiếng Việt sai hoặc không hợp ngữ cảnh
+title: "[nghĩa sai] "
+labels: ["wrong-sense"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Nếu mục từ hiện định nghĩa tiếng Anh kèm dòng ghi chú thì đó là entry **chưa dịch**,
+        không phải dịch sai — phần nghĩa đang bổ sung dần theo tầng tần suất, xem
+        [Số liệu thực tế](../../#số-liệu-thực-tế). Không cần báo những mục đó.
+
+  - type: input
+    id: word
+    attributes:
+      label: Từ
+      placeholder: spring
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Nghĩa đang hiện
+      placeholder: mùa xuân; lò xo
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Nghĩa đúng theo bạn
+      placeholder: thiếu nét nghĩa "suối, mạch nước"
+    validations:
+      required: true
+
+  - type: textarea
+    id: sentence
+    attributes:
+      label: Câu trong sách làm lộ ra vấn đề
+      description: Ngữ cảnh giúp phân biệt "dịch sai" với "dịch đúng nhưng thiếu một nét nghĩa".
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: license
+    attributes:
+      label: Nguồn của nghĩa đề xuất
+      options:
+        - label: Nghĩa tôi đề xuất là do tôi tự viết, không chép từ từ điển thương mại nào hay bản phái sinh của chúng.
+          required: true

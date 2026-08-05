@@ -1,0 +1,61 @@
+name: Từ tra không ra
+description: Chạm vào một từ trên máy đọc sách nhưng từ điển không hiện gì
+title: "[tra không ra] "
+labels: ["lookup-miss"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ghi đúng từ bạn **chạm vào trên máy**, không phải dạng nguyên thể của nó.
+        `outdid` thiếu trong khi `outdo` có sẵn là một lỗi khác hẳn với việc thiếu cả hai —
+        hai lỗi đó nằm ở hai chỗ khác nhau trong pipeline.
+
+  - type: input
+    id: word
+    attributes:
+      label: Từ bạn chạm vào
+      placeholder: outdid
+    validations:
+      required: true
+
+  - type: input
+    id: headword
+    attributes:
+      label: Dạng nguyên thể (nếu bạn biết)
+      placeholder: outdo
+    validations:
+      required: false
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Máy đọc sách
+      options:
+        - Kindle (MOBI)
+        - Kobo (dicthtml)
+        - KOReader
+        - Boox
+        - GoldenDict
+        - PocketBook
+        - Khác
+    validations:
+      required: true
+
+  - type: dropdown
+    id: behaviour
+    attributes:
+      label: Máy hiện gì?
+      options:
+        - Không hiện popup nào cả
+        - Hiện popup nhưng báo không tìm thấy
+        - Hiện popup của một từ khác
+    validations:
+      required: true
+
+  - type: textarea
+    id: sentence
+    attributes:
+      label: Câu trong sách (nếu tiện)
+      description: Giúp phân biệt lỗi biến thể với lỗi tách từ.
+    validations:
+      required: false

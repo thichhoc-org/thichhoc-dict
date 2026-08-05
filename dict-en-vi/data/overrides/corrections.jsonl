@@ -1,0 +1,11 @@
+// Sửa tay, ghi đè lên dữ liệu sinh tự động.
+//
+// Mỗi dòng là một entry *một phần*: chỉ những khoá có mặt mới bị thay thế.
+// Bắt buộc phải có "id". File này được áp dụng SAU pipeline, nên chạy lại
+// Stage 1 không bao giờ làm mất sửa đổi ở đây (kế hoạch §5, §7.6).
+//
+// Cách ghi:
+//   uv run python -m core.tools.entry set en:run:v --sense "chạy" --reviewed
+//
+// Ví dụ (đang bị comment, bỏ // ở đầu dòng để dùng thật):
+// {"id":"en:run:v","senses_vi":["chạy; chạy bộ","vận hành, điều hành"],"reviewed":true}
