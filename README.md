@@ -1,5 +1,5 @@
-<a href="https://thichhoc.com/brand">
-  <img src="docs/assets/thichhoc-daisy.svg" alt="thichhoc" width="96" align="right">
+<a href="https://thichhoc.com">
+  <img src="docs/assets/thichhoc-logo.svg" alt="nhà tài trợ thichhoc.com" width="220" align="right">
 </a>
 
 # Từ điển Anh–Việt cho Kindle, Kobo, KOReader và Boox — mã nguồn mở
